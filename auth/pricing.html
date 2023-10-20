@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/resourses/stripe/stripe.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../resourses/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../resourses/css/pricing.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet" />
+    <script src="js/stripe.js"></script>
+  </head>
+  <body>
+    <div class="container py-3">
+      <header>
+        <div
+          class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom"
+        >
+          <span
+            href="/"
+            class="d-flex align-items-center text-dark text-decoration-none"
+          >
+            <span class="fs-4">Comment Helper Buddha</span>
+          </span>
+
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <span
+              class="me-2 text-dark text-decoration-none"
+              id="headerEmail"
+            ></span>
+          </nav>
+        </div>
+
+        <div class="pricing-header p-2 pb-md-4 mx-auto text-center">
+          <h2 class="display-5 fw-normal">Card Payment Plans</h2>
+          <p class="fs-5 text-muted">
+            Choose one of our plans. If you already have time on your account, newly bought time will be added to you account (new time + old time). The buttons lead to a secure checkout. Most
+            card payments are accepted.
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h3 class="my-0 fw-normal">Montly</h3>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title pricing-card-title">
+                  $7.5<small class="text-muted fw-light">/mo</small>
+                </h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>One-time payment</li>
+                  <li>One month of unlimited use</li>
+                </ul>
+                <button
+                  type="button"
+                  id="oneMonthBtn"
+                  class="w-100 btn btn-lg btn-primary checkoutBtn"
+                >
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h3 class="my-0 fw-normal">Quarterly</h3>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title pricing-card-title">
+                  $6<small class="text-muted fw-light">/mo</small>
+                </h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>One-time payment of 18$</li>
+                  <li>Three months of unlimited use</li>
+                  <li><strong>Save 20%</strong></li>
+                </ul>
+                <button
+                  type="button"
+                  id="threeMonthBtn"
+                  class="w-100 btn btn-lg btn-primary checkoutBtn"
+                >
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h3 class="my-0 fw-normal">Yearly</h3>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title pricing-card-title">
+                  $5<small class="text-muted fw-light">/mo</small>
+                </h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li><i>Best value option!</i></li>
+                  <li>One-time payment of 60$</li>
+                  <li>One year of unlimited use</li>
+                  <li style="font-size: 110%"><strong>Save 33%</strong></li>
+                </ul>
+                <button
+                  type="button"
+                  id="oneYearBtn"
+                  class="w-100 btn btn-lg btn-primary checkoutBtn"
+                >
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="fs-5 text-center mb-4 text-muted">Time will be added automatically.<br>
+          You will be emailed a reciept after a completed purchase.<br />
+          Your card will not be saved.<br>No additional charges will be made.
+        </p>
+        <hr class="featurette-divider" />
+        <div class="pricing-header p-2 pb-md-4 mx-auto text-left">
+          <h2 class="display-6 fw-normal">Payoneer payment option</h2>
+          <p class="fs-5">
+            If you do not have a card available,<br />
+            You can purchase time by transfering funds to our Payoneer account.
+            <ul class="fs-5"><li>First, you need to enter your payoneer account and click <i>"Pay"</i>, then choose <i>"Pay to a recipient's Payoneer account".</i> Like this:<br>1.<img class="p-1" src="/resourses/images/pay.png">2.<img class="p-1" src="/resourses/images/payto.png"></li><li>Enter our email: <strong>srbsavic1@gmail.com</strong><br/>Send 60$ for a Yearly Package<span class="text-muted">  $5/mon</span><br><span class="text-muted">No Montly or Quarterly Package available</span></li><li>Then in the <i>"Purpose of payment"</i> please write your <strong>CH Buddha account email.</strong> It should Look like this:<img class="p-1" src="/resourses/images/payoSend.PNG"></li><li>After you send. As soon as we see the payment, time will be added to your account</li>
+            </ul><p class="fs-5">In the meantime, feel free to contact us at "CommentHelperBuddha@gmail.com"<br>Or send a message to my skype at "savic.milan95" as "Ed P"</p>
+          </p>
+        </div>
+      </main>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <small class="d-block mb-3 text-muted"
+            >&copy; 2022 Tutor Aid LTD</small
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

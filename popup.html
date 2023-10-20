@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./resourses/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./resourses/css/popup.css" />
+    <link rel="stylesheet" href="./resourses/css/googleapisRoboto900.css" />
+    <link rel="stylesheet" href="./resourses/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <body style="height: auto; width: 500px">
+      <div class="container-fluid position-relative">
+        
+          <div class="row d-flex"> 
+            <div class = "name-form col-3 px-0 ms-2 ps-1"data-bs-toggle="tooltip" title="Enter your Bedakid teacher name">
+              <input id = "nameInput" class="form-control form-control-sm mt-3 pe-0"  
+type="text"placeholder="Your teaching name" disabled/></div>
+          <div id="bubbleWindow" class = "col-7 px-0 mt-1 pe-4 me-5 container"><div id="spinner" class="spinner-border spinner-border-sm float-end mt-3 me-4"
+            role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div></div><img src="./resourses/images/onlyLogo48.png" id="logo-img" class="position-absolute end-0 px-1 me-1 dropdown-toggle" style="height: 48px; width: auto;" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul id="invDropdown" class="dropdown-menu" aria-labelledby="logo-img">
+              <li><a id="logoDropdownBuy" class="dropdown-item disabled" href="/auth/pricing.html">Purchase time</a></li>
+              <li><a id="logoDropdownLogout" class="dropdown-item disabled" href="#" >Log-out</a></li>
+            </ul>
+      </div>
+       <div class="row px-0" id = "rowDivDropdowns">
+        <div class="btn-group col-auto ps-2">
+          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownOne"disabled>
+            Choose a comment group
+          </button>
+          <ul class="dropdown-menu" area-labelledby="dropdownOne" id="dropdownOneMenu">
+            <li><a class="dropdown-item" href="#">Regular student &rsaquo;</a><ul class="dropdown-menu dropdown-submenu"></ul></li> 
+            <li><a class="dropdown-item" href="#">New student &rsaquo;</a><ul class="dropdown-menu dropdown-submenu"></ul></li>
+            <li><a class="dropdown-item" href="#">Needs Improvement &rsaquo;</a><ul class="dropdown-menu dropdown-submenu"></ul></li>
+            <li><a class="dropdown-item" href="#">Misbehaving &rsaquo;</a><ul class="dropdown-menu dropdown-submenu"></ul></li>
+            <li><a class="dropdown-item" href="#">Grammar Advice &rsaquo;</a><ul class="dropdown-menu dropdown-submenu"></ul></li>
+            <li><a class="dropdown-item" href="#">Special Case &rsaquo;</a><ul class="dropdown-menu dropdown-submenu"></ul></li></ul>
+        </div>
+
+     </div>
+          <textarea class = "form-control form-control-sm"
+            id="textarea"
+            rows ='8'
+            placeholder='Type out or choose, and save the second part comment in the male gender form.&#10With "SSS" instead of the student&#146s name.'disabled></textarea>
+    <div class="row align-items-center mt-1 border-bottom pe-2" id="rowDivPagination">
+              <ul class="pagination pagination-sm justify-content-center mb-2 col-10"></ul>
+              <button id="saveBtn" type="button" class="btn btn-outline-primary col" type="Submit" value="Save" disabled>Save</button>
+    </div>
+    <div class="row">
+              <div id="btnRow" class="row col-auto me-auto row-cols-1 pe-0">
+                <div id="goBtnWrapper" class="col-auto ps-2" tabindex="0" data-bs-toggle="tooltip" title="Open a comment page to run"><button type="button" class="btn btn-lg btn-success"id="goBtn" disabled>Run</button></div>
+                <div id="app-cover" class = "col-auto"  data-bs-toggle="tooltip" title="Run the extension first">
+                  <input type="checkbox" id="checkbox"disabled>
+                  <div id="path"></div>
+                  <div id="knob">
+                    <div id="bow" style="border-radius: 20%"><img src="./resourses/images/md-bowtie-4.svg"></img></div>
+                  </div>
+                  <div id="gender">
+                    <div id="fe">FE</div>
+                    <div id="male"><span>MALE</span></div>
+                  </div>
+                </div>
+              <div class="form-check form-switch col-auto align-self-center" data-bs-toggle="tooltip" title="Runs automatically on blank comment pages">
+                <input class="form-check-input" type="checkbox" role="switch" id="autoSwitch"disabled>
+                <label class="form-check-label col-auto" for="autoSwitch">Autorun</label>
+              </div>
+    
+        </div>
+        <div class = "col-auto align-self-end"><a id="skypeGroup-link" href="https://join.skype.com/M4UEjbKFLbkW" class="link-secondary small m-1">Skype group</a><a class = "link-secondary small m-1 pt-0" id="review-link" href = "">Rate us</a></div>
+    </div>  
+</div>
+                   
+    <script src="./resourses/css/popper.min.js"></script>
+    <script src="./resourses/css/bootstrap.min.js"></script>
+    <script src="content.js"></script>
+    <script src="popup.js"></script>
+
+  </body>
+</html>
